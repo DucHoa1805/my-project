@@ -1,0 +1,158 @@
+/* Reset cơ bản để trình duyệt hiển thị đồng nhất */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* transition: all 0.3s ease; Làm hiệu ứng mượt trong 0.3 giây*/
+
+}
+
+/* Responsive nhẹ */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  header.profile img {
+    width: 90px;
+    height: 90px;
+  }
+  header.profile h1 {
+    font-size: 22px;
+  }
+}
+
+body{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*font chữ của thẻ body */
+    background-color: #f5f7fa;  
+    color: #333;
+    line-height: 1.6; /*khoảng cách các dòng chữ với nhau */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+
+header.profile{
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+header.profile img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+}
+
+header.profile p{
+    color: #555;
+    font-weight: 500;
+}
+
+section{
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+section h2{
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+footer{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+}
+
+a{
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+    
+ul{
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+
+/* Hiệu ứng hover và chuyển động mượt */
+
+section:hover{
+    transform: translateY(-4px); /*Khi hover vào section, nó nhấc lên 4px */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* hover khi di chuot vao anh dai dien */
+header.profile img:hover{
+    transform: scale(1.05) rotate(2deg);
+}
+
+a:hover{
+    color: #0056b3;
+}
+
+
+/* dark mode */
+#toggle-theme{
+    margin-top: 15px;
+    padding: 8px 16px;
+     border: none; /*làm mất viền của button */
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#toggle-theme:hover{
+    background-color: #0056b3;
+}
+
+/* giao diện dark mode */
+body.dark-mode{
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+body.dark-mode header.profile{
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+body.dark-mode section{
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+body.dark-mode h2{
+    color: #4dabf7;
+}
+
+body.darkmod a{
+    color: #4dabf7;
+}
+
+body.dark-mode #toggle-theme{
+    background-color: #4dabf7;
+    color: #111;
+}
+
+body.dark-mode #toggle-theme:hover{
+    background-color: #339af0;
+}
